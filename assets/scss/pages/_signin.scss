@@ -1,0 +1,56 @@
+body {
+
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+
+  }
+
+  .box {
+    .navbarHeader {
+      background-color: rgba(rgb(0, 0, 0), 0.781);
+
+      a {
+        color: $themePureWhite ;
+      }
+    }
+  }
+
+  .loginRowBox {
+    .loginBox {
+      form {
+        width: 40%;
+        max-width: 400px;
+        min-width: 290px;
+        background-color: rgba(rgb(12, 12, 12), 0.75);
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        padding: 25px 3vw 25px 3vw;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-shadow: 5px 4px 25px rgb(21, 22, 21);
+        color: $themePureWhite ;
+        input:active{
+          transform: scale(1.2);
+          transition: 200ms;
+        }
+        button:active{
+          transform: scale(1.2);
+          transition: 200ms;
+        }
+
+
+        .or {
+          @include socialMeddiaIcon;
+        }
+      }
+
+    }
+  }
+}

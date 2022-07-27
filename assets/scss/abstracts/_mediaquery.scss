@@ -1,0 +1,159 @@
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */  
+  .aboutBox{
+    p{
+      text-align: center;
+    }
+  }
+  
+  .footer{
+    .footerbox{
+      .footerBoxOne{
+        .footerRowBox1{
+          text-align: center;
+        }
+      }          
+      .footerBoxTwo{        
+        .footerRowBox6{
+          text-align: center;
+        }
+        .footerRowBox7{          
+          text-align: center;
+          
+        }
+      }
+    }
+  }
+  .showhide{
+    .boxTwo{
+      .innerBox{
+        .card{
+          // background-color: red;
+          // width:240px;
+          img{
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    .slider{
+
+      .sliderBox{
+        .carousel{
+          .carousel-inner{            
+            img{
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .order{
+    .detail{
+      text-align: center;
+
+    }
+    .orderDetail { 
+      .innerBox2 {
+          @include center;
+          margin-top: 2rem;
+          width:70%;
+          .location {
+              border: none;
+              color: $themeBlue;
+
+              &:active {
+                  transform: scale(1.2);
+                  transition: 200ms;
+              }
+          }
+      }
+  }
+
+                
+}
+
+
+@media only screen and (max-width: 992px) {
+  /* For mobile phones: */
+  .showhide{
+    .boxTwo{
+      .innerBox{
+        .card{
+          @include center;
+          
+          // width:15vw;
+          img{
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    
+  }   
+  
+               
+}
+
+@media only screen and (max-width: 576px) {
+  /* For mobile phones: */
+  
+  
+  .contactUsBox{
+    h1{
+      margin-bottom:1em;
+      
+      color: red;
+    }
+     
+    }
+    // .formBox{
+    //     form{      
+        
+        
+    //   }
+    // }
+  } 
+  
+  .showhide{    
+    .slider{
+      .sliderBox{
+        .carousel{
+          .carousel-inner{
+            img{
+              height:180px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .order{
+    .productImage{
+      .inner-product-image{
+        .card{         
+          width:50vw;
+          @include center;
+          box-shadow: 2px 5px 6px 
+        }
+      }
+    }
+    .orderDetail {
+      .innerBox2 {
+          @include center;
+          text-align: center;
+          width: 98%;       
+            .location {
+              border: none;
+              color: $themeBlue;
+              &:active {
+                  transform: scale(1.2);
+                  transition: 200ms;
+              }
+          }
+      }
+    }
+  }     
+            
+}

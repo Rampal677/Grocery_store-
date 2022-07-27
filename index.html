@@ -1,0 +1,1635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Groci Store</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- aos link  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!--jQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Add icon library -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/9a3f5f7696.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="assets/scss/stylesheet.css">
+
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row box">
+
+      <!--Header and side navbar code start from here-->
+      <section class="col-xs-12 header">
+        <nav class="navbar navbar-light fixed-top">
+          <a class="navbar-brand" href="index.html"><img src="assets/image/logo/mainLogo.png" class="mainLogo" alt="" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
+          <div class=" d-none d-md-block ">
+            <form class="d-flex search-form searchForm  " data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+              <input class="form-control me-2 " type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+              <a class="d-none d-md-block" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </form>
+          </div>
+          <div class="justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <img class="rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg"  id="profileImage1"  alt="image">
+          </button>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" data-bs-toggle="offcanvas" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header offcanvasHeader justify-content-center ">
+              <h5 class="offcanvas-title offcanvasTitle " id="offcanvasNavbarLabel"><img class="mainProfilePic text-center rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg" id="profileImage2" alt=""><br><span id="localUserName">Rampal Singh</span></h5>
+              <button type="button" class="btn-close btnClose text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvasBody">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" card-product-name herf="index.html"> <i class="fa-solid fa-house-user"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="order.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-folder"></i> Order</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="" onclick="logout()" id="logutside"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="login.html" id="loginside"> <i class="fa-solid fa-right-to-bracket"></i> Log in</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!--Header and side navbar code ends here-->
+
+      <!--navar code start from here-->
+      <section class="col-sm-12 navbarHeader d-none d-sm-none d-md-block" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <div class="container-fluid">
+          <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house-user"></i> Home
+          </a>
+          <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+          <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          <a class="nav-link" href="order.html"> <i class="fa-solid fa-folder"></i> Order</a>
+          <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+          <a class="nav-link" href="login.html" tabindex="-1" aria-disabled="true" id="login"><i
+              class="fa-solid fa-right-to-bracket"></i>Log In</a>
+          <a class="nav-link" href="" tabindex="-1" aria-disabled="true" id="logout" onclick="logout()"><i
+            class="fa-solid fa-right-to-bracket"></i>Log out</a>
+        </div>
+      </section>
+
+      <!--search bar for notepad to small device-->
+      <section class="col-sm-12 mt-2 mdSearch">
+        <form class="d-flex search-form searchForm" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+          <input class="form-control me-2 d-block d-md-none" type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+          <a class="d-block d-md-none" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </form>
+      </section>
+      <!--navar code ends here-->
+    </div>
+  </div>
+
+  <div class="showhide container-fluid" id="view">
+
+    <!--Slider code start from here-->
+    <section class="slider row">
+      <div class="col-sm-12 sliderBox" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/image/banner/slider11.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/image/banner/slider2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/image/banner/slider14.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Slider code ends here-->
+
+
+    <!--Our popular item code start from here-->
+    <div class="d-none d-sm-block">
+      <section class="row boxTwo " id="boxTow">
+        <h1 class="text-center" id="popular" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="300">Our Popular Items</h1>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center " data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p1-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p1-card-title">Card title</h5>
+              <p class="card-text" id="p1-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(0)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p2-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p2-card-title">Card title</h5>
+              <p class="card-text" id="p2-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(1)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p3-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p3-card-title">Card title</h5>
+              <p class="card-text" id="p3-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(2)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p4-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p4-card-title">Card title</h5>
+              <p class="card-text" id="p4-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(3)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p5-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p5-card-title">Card title</h5>
+              <p class="card-text" id="p5-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(4)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p6-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p6-card-title">Card title</h5>
+              <p class="card-text" id="p6-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(5)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p7-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p7-card-title">Card title</h5>
+              <p class="card-text" id="p7-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(6)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p8-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p8-card-title">Card title</h5>
+              <p class="card-text" id="p8-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(7)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p9-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p9-card-title">Card title</h5>
+              <p class="card-text" id="p9-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(8)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p10-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p10-card-title">Card title</h5>
+              <p class="card-text" id="p10-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(9)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p11-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p11-card-title">Card title</h5>
+              <p class="card-text" id="p11-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(10)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p12-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p12-card-title">Card title</h5>
+              <p class="card-text" id="p12-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(11)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p13-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p13-card-title">Card title</h5>
+              <p class="card-text" id="p13-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(12)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p14-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p14-card-title">Card title</h5>
+              <p class="card-text" id="p14-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(13)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p15-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p15-card-title">Card title</h5>
+              <p class="card-text" id="p15-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(14)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p16-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p16-card-title">Card title</h5>
+              <p class="card-text" id="p16-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(15)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p17-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p17-card-title">Card title</h5>
+              <p class="card-text" id="p17-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(16)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p18-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p18-card-title">Card title</h5>
+              <p class="card-text" id="p18-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(17)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src="" id="p19-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p19-card-title">Card title</h5>
+              <p class="card-text" id="p19-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(18)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p20-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p20-card-title">Card title</h5>
+              <p class="card-text" id="p20-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(19)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src="image/Arun.jpg" id="p21-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p21-card-title">Card title</h5>
+              <p class="card-text" id="p21-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(20)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src="" id="p22-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p22-card-title">Card title</h5>
+              <p class="card-text" id="p22-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(21)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p23-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p23-card-title">Card title</h5>
+              <p class="card-text" id="p23-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(22)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p24-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p24-card-title">Card title</h5>
+              <p class="card-text" id="p24-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(23)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p25-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p25-card-title">Card title</h5>
+              <p class="card-text" id="p25-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(24)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p26-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p26-card-title">Card title</h5>
+              <p class="card-text" id="p26-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(25)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p27-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p27-card-title">Card title</h5>
+              <p class="card-text" id="p27-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(26)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p28-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p28-card-title">Card title</h5>
+              <p class="card-text" id="p28-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(27)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p29-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p29-card-title">Card title</h5>
+              <p class="card-text" id="p29-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(28)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p30-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p30-card-title">Card title</h5>
+              <p class="card-text" id="p30-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(29)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p31-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p31-card-title">Card title</h5>
+              <p class="card-text" id="p31-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(30)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p32-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p32-card-title">Card title</h5>
+              <p class="card-text" id="p32-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(31)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p33-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p33-card-title">Card title</h5>
+              <p class="card-text" id="p33-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(32)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p34-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p34-card-title">Card title</h5>
+              <p class="card-text" id="p34-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(33)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p35-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p35-card-title">Card title</h5>
+              <p class="card-text" id="p35-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(34)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 innerBox d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
+          <div class="card" style="width: 18rem;">
+            <img src=" " id="p36-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="p36-card-title">Card title</h5>
+              <p class="card-text" id="p36-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(35)">Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Our popular item code ends here-->
+    </div>
+    <!--Our popular item code start here for mobile screen-->
+    <section class="d-block d-sm-none boxTowSm ">
+      <h1 class="text-center mt-3" id="popular" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="300">Our Popular Item</h1>
+      <div class="card row me-2 " onclick="buy(0)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p1-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p1-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p1-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(1)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p2-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p2-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p2-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(2)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p3-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p3-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p3-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(3)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p4-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p4-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p4-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(4)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p5-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p5-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p5-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(5)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p6-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p6-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p6-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(6)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p7-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p7-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p7-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(7)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p8-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p8-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p8-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(8)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p9-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p9-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p9-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(9)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p10-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p10-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p10-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(10)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p11-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p11-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p11-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(11)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p12-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p12-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p12-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(12)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p13-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p13-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p13-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(13)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p14-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p14-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p14-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(14)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p15-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p15-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p15-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(15)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p16-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p16-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p16-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(16)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p17-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p17-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p17-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(17)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p18-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p18-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p18-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(18)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p19-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p19-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p19-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(19)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p20-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p20-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p20-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(20)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p21-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p21-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p21-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(21)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p22-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p22-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p22-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(22)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p23-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p23-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p23-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(23)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p24-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p24-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p24-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(24)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p25-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p25-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p25-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(25)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p26-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p26-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p26-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(26)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p27-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p27-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p27-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(27)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p28-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p28-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p28-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(28)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p29-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p29-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p29-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(29)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p30-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p30-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p30-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(30)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p31-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p31-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p31-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(31)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p32-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p32-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p32-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(32)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p33-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p33-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p33-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(33)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p34-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p34-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p34-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(34)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p35-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p35-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p35-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(35)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p36-card-img-sm" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p36-card-title-sm">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p36-card-price-sm">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Our popular item code start here for mobile screen-->
+  </div>
+
+  <!--order section start from here-->
+  <section class="container-fluid " id="order">
+    <div class="row order mt-3 ">
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 productImage">
+        <div class="inner-product-image container-fluid">
+          <div class="card">
+            <img src="" id="product-image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="cardProductName"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 productDetail" id="productDetail">
+        <div class="detail ">
+          <h2 id="productName">productName</h2>
+          <p id="productPrice">₹50 kg</p>
+          <span>Qty : </span><input type="number" min="1" max="50" value="1" id="productQty" onchange="totalPrice()">
+          <h5 id="totalPrice" class="mt-3">Total price :</h5>
+          <button class="btn btn-primary  mt-3" onclick="addCart()">ADD TO CARD</button>
+          <button class="btn btn-primary mt-3" onclick="buyNow()">BUY NOW </button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 c0l-lg-6 col-xl-6 orderDetail" id="orderDetail">
+        <div class="innerBox2 p-5 text-center" id="orderDetailBox">
+          <h2 class="text-center mb-3">Order Detail</h2>
+          <span style="float: left;" class="">Product Name :</span>
+          <h5 class="productName" id="OrderProductName"> mango</h5>
+          <span style="float: left;">Product Weight :</span>
+          <h5 class="productWeight" id="OrderProductWeight"> 23kg</h5>
+          <span style="float: left;">Total Payable :</span>
+          <h5 class="productTotalPrice" id="OrderProductTotalPrice"> 2310</h5>
+          <form action="" class="text-center">
+            <input type="text" class="form-control mt-2 text-center" placeholder="Mobile Number" min="10" required>
+            <textarea type="text" class="form-control mt-2  text-center" placeholder="Address" required></textarea>
+            <div class="mt-3">
+              <span>Add your location </span><button class="location" type="button"><i
+                    class="fa-solid fa-map-location-dot"></i></button>
+            </div>
+            <button class="btn btn-dark mt-2" onclick="placeOrder()">Place Order</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- <div class="row order mt-3">
+      <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6 mt- productImage" data-aos="fade-right"
+        data-aos-easing="ease-out-cubic" data-aos-duration="600">
+        <div class="inner-product-image container-fluid">
+          <div class="card"  >
+            <img src="" id="product-image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="cardProductName"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-xl-6 col-lg-6 col-md-6 productDetail" id="productDetail">
+        <div class="detail ">
+          <h2 id="productName">productName</h2>
+          <p id="productPrice">₹50 kg</p>
+          <span>Qty : </span><input type="number" min="1" max="50" value="1" id="productQty"
+            onchange="totalPrice()">
+          <h5 id="totalPrice" class="mt-3">Total price :</h5>
+          <button class="btn btn-primary me-2 mt-3" onclick="addCart()">ADD TO CARD</button>
+          <button class="btn btn-primary mt-3" onclick="buyNow()">BUY NOW </button>
+        </div>
+      </div> -->
+
+  <!--Order Detail code start from here-->
+  <!-- <section class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 orderDetail" id="orderDetail">
+        <div class="innerBox2 p-5 text-center" style="width:30rem;" id="orderDetailBox">
+          <h2 class="text-center mb-3">Order Detail</h2>
+          <span style="float: left;" class="">Product Name :</span>
+          <h5 class="productName" id="OrderProductName"> mango</h5>
+          <span style="float: left;">Product Weight :</span>
+          <h5 class="productWeight" id="OrderProductWeight"> 23kg</h5>
+          <span style="float: left;">Total Payable :</span>
+          <h5 class="productTotalPrice" id="OrderProductTotalPrice"> 2310</h5>
+          <form action="" class="text-center">
+            <input type="text" class="form-control mt-2 text-center" placeholder="Mobile Number" min="10" required>
+            <textarea type="text" class="form-control mt-2  text-center" placeholder="Address" required></textarea>
+            <div class="mt-3">
+              <span>Add your location </span><button class="location" type="button"><i
+                  class="fa-solid fa-map-location-dot"></i></button>
+            </div>
+            <button class="btn btn-dark mt-2" onclick="placeOrder()">Place Order</button>
+          </form>
+        </div> -->
+  <!-- </section> -->
+  <!-- Order Detail code ends from here -->
+
+  <!-- </div> -->
+  <!-- </section> -->
+  <!-- <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 lastCardBox" id="lastCardBox"></div> -->
+  <div class="d-none d-sm-block">
+    <div class="container-fluid " id="suggetionCard">
+      <!--suggetion products code start from here  -->
+      <div class="row suggetionCard text-center mt-5 mb-2" id="suggetionCard">
+        <h1 class="text-center pt-20 pb-20">Suggested for you</h1>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product1.jpg" id="s-1card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-1-card-title">Chili </h5>
+              <p class="card-text" id="s-1-card-price">₹50.</p>
+              <button class="btn btn-primary" onclick="buy(0)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product12.jpg" id="s-2-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-2-card-title">Mango</h5>
+              <p class="card-text" id="s-2-card-price">₹36.</p>
+              <button class="btn btn-primary" onclick="buy(11)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product3.jpg" id="s-2-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-2-card-title">Butterhead lettuce</h5>
+              <p class="card-text" id="s-2-card-price">₹100.</p>
+              <button class="btn btn-primary" onclick="buy(2)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product6.jpg" id="s-3-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-3-card-title">Key lime</h5>
+              <p class="card-text" id="s-3-card-price">₹33.</p>
+              <button class="btn btn-primary" onclick="buy(5)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product7.jpg" id="s-4-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-4-card-title">Broccoli</h5>
+              <p class="card-text" id="s-4-card-price">₹55.</p>
+              <button class="btn btn-primary" onclick="buy(6)">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 innerBox d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="assets/image/Product/product13.jpg" id="s-5-card-img" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" id="s-5-card-title">White broccoli</h5>
+              <p class="card-text" id="s-5-card-price">₹75.</p>
+              <button class="btn btn-primary" onclick="buy(12)">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--suggetion products code ends here  -->
+
+      <!--suggetion products code Start here for mobile screen  -->
+    </div>
+  </div>
+  <section class="d-block d-sm-none">
+    <div class=" suggetionCardSm ms-3" id="suggetionCardsm">
+      <div class="card row me-2 " onclick="buy(0)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p1-card-img-sm-s" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p1-card-title-sm-s">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p1-card-price-sm-s">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(1)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p2-card-img-sm-s" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p2-card-title-sm-s">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p2-card-price-sm-s">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(2)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p3-card-img-sm-s" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p3-card-title-sm-s">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p3-card-price-sm-s">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card  row me-2 " onclick="buy(3)">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=" " id="p4-card-img-sm-s" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title" id="p4-card-title-sm-s">Chilli</h5>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="card-text" id="p4-card-price-sm-s">$3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--suggetion products code Start here for mobile screen  -->
+
+
+
+
+
+  <!--footer section start from here-->
+  <section class="footer mt-5 " id="idexFooter">
+
+    <section class="container-fluid footerbox ">
+      <div class="row footerBoxOne ">
+        <div class="col-lg-4 col-md-8 col-sm-12 footerRowBox1 ">
+          <div class="justify-content-center">
+            <img src="assets/image/logo/mainLogo.png" width="150px" alt="">
+          </div>
+          <p class="mt-3">Groci.com (Innovative Retail Concepts Private Limited) is India’s largest online fruits and grocery store. With over 18,000 products and over a 1000 brands in our catalogue you will find everything you are looking for. Right from fresh Fruits
+            and Vegetables. Choose from a wide range of options in every category, exclusively handpicked to help you find the best quality available at the lowest prices.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-2 footerRowBox2 mb-4 ">
+          <h5>Company</h5>
+          <li><a href="aboutUs.html">About Groci store</a></li>
+          <li>
+            <p>Life At Company</p>
+          </li>
+          <li>
+            <p>How We Work</p>
+          </li>
+          <li>
+            <p>What Our Clients Say</p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox3  mb-4">
+          <h5>Support</h5>
+          <li>
+            <p>Privacy Policy</p>
+          </li>
+          <li>
+            <p>Terms & Conditions</p>
+          </li>
+          <li><a href="">Contact Us</a></li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox4 mb-4">
+          <h5>Quick Links</h5>
+          <li>
+            <p>Blog</p>
+          </li>
+          <li>
+            <p>Hire Us</p>
+          </li>
+          <li>
+            <p>Career</p>
+          </li>
+          <li><a href="">About us</a></li>
+          <li>
+            <p>React js </p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox5 mb-4">
+          <h5>Follow Us</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-skype"></a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="row footerBoxTwo">
+        <div class="col-lg-5 col-md-6 col-sm-6  footerRowBox6 ">
+          <h5>Registered Office Address:</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <p>Groci Internet Private Limited</p>
+            <p>Building Alyssa Begonia &</p>
+            <p>Outer Ring, Devarabeesanahalli Village,</p>
+            <p>Bengaluru, 560103, </p>
+            <p>Karnataka, India </p>
+            <p>CIN : U5ADN5SD54DJ2K5D</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6  footerRowBox7">
+          <h5>Make Money With Us</h5>
+          <div class="makeMoney mt-2 mb-2">
+            <p>Sell on groci store</p>
+            <p>Sell under groci store Accelerator</p>
+            <p>groci store Global Selling</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by groci store</p>
+            <p>Advertise Your Products</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12  footerRowBox8 text-center mt-5">
+          <img src="assets/image/qr.png" width="150px" alt="">
+          <h5>groci store</h5>
+        </div>
+        <span class="text-center mt-2">Copyright 2021 - 2022 <a href="index.html">Groci Store Pvt. Ltd. </a> All Rights
+                  Reserved. </span>
+      </div>
+    </section>
+
+  </section>
+  <!--footer section start from here-->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- -----------------------JS Animation---------------------------- -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- <script src="assets/JavaScript/order.js"></script> -->
+  <script src="assets/javascript/index.js"></script>
+  <script src="assets/javascript/order.js"></script>
+  <script src="assets/javascript/login.js"></script>
+
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>

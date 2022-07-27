@@ -1,0 +1,48 @@
+body{
+  background-color: $themePureWhite ;
+}
+
+.footerbox {
+  background-color: rgba($themePureBlack , .829);
+  padding: 45px;
+  color: $themePureWhite;
+
+  .footerBoxOne {
+    .footerRowBox2{
+      @include footerRowBox;
+    }
+    .footerRowBox3{
+      @include footerRowBox;
+    }
+    .footerRowBox4{
+      @include footerRowBox;
+    }
+    .footerRowBox5{
+      @include footerRowBox;
+    }
+    .footerRowBox5 {
+      @include socialMeddiaIcon;
+      text-align: center;
+    }   
+    
+  }     
+
+  .footerBoxTwo {
+    h5 {
+      color: $themePureYellow;
+    }
+
+    .footerRowBox7 {
+      .makeMoney {
+        p {
+          color: $themePureWhite;
+          text-decoration: none;
+          &:hover {
+            color: $themeRed;
+            text-shadow: 2px 2px 15px;
+            }
+          }
+        }
+      }
+    }
+  }

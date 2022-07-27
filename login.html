@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- aos link  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--jQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Add icon library -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/9a3f5f7696.js" crossorigin="anonymous"></script>
+
+  <!--custom css -->
+  <link rel="stylesheet" href="assets/scss/stylesheet.css">
+  <title>login</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <video autoplay muted loop id="myVideo">
+        <source src="assets/video/Kids.mp4" type="video/mp4">
+      </video>
+    <div class="row box">
+
+      <!--Header side nav code code start from here-->
+      <section class="col-xs-12 header">
+        <nav class="navbar navbar-light fixed-top">
+          <a class="navbar-brand" href="index.html"><img src="assets/image/logo/mainLogo.png" class="mainLogo" alt="" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
+          <div class=" d-none d-md-block ">
+            <form class="d-flex search-form searchForm  " data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+              <input class="form-control me-2 " type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+              <a class="d-none d-md-block" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </form>
+          </div>
+          <div class="justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <img class="rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg"  id="profileImage1"  alt="image">
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" data-bs-toggle="offcanvas" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header offcanvasHeader justify-content-center ">
+              <h5 class="offcanvas-title offcanvasTitle " id="offcanvasNavbarLabel"><img class="mainProfilePic text-center rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg" id="profileImage2" alt=""><br><span id="localUserName">Rampal Singh</span></h5>
+              <button type="button" class="btn-close btnClose text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvasBody">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" card-product-name herf="index.html"> <i class="fa-solid fa-house-user"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="order.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-folder"></i> Order</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="" onclick="logout()" id="logutside"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="login.html" id="loginside"> <i class="fa-solid fa-right-to-bracket"></i> Log in</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!--Header side nav code ends here-->
+
+      <!--navar code start from here-->
+      <section class="col-sm-12 navbarHeader d-none d-sm-none d-md-block" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <div class="container-fluid">
+          <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house-user"></i> Home
+          </a>
+          <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+          <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          <a class="nav-link" href="order.html"> <i class="fa-solid fa-folder"></i> Order</a>
+          <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+        </div>
+      </section>
+      <!--search bar for notepad to small device-->
+      <section class="col-sm-12 mt-2 mdSearch">
+        <form class="d-flex search-form searchForm" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+          <input class="form-control me-2 d-block d-md-none" type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+          <a class="d-block d-md-none" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </form>
+      </section>
+      <!--navar code ends here-->
+
+    </div>
+    <!--Login code start from here-->
+    <section class="row loginRowBox">
+      <div class="loginBox" id="loginBox" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <form class="text-center">
+          <h2 class="mb-3 mt-3">LOG IN</h2>
+          <div class="mb-3">
+            <label for="loginInputEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control text-center" id="loginInputEmail" placeholder="Email" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-2">
+            <label for="loginInputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control text-center" id="loginInputPassword" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one
+              uppercase and lowercase letter, and at least 8 or more characters">
+          </div>
+          <button class="btn btn-primary mt-3 w-50 mb-2 rounded-3 " onclick="login()">LOGIN</button> <br>
+          <span><a href="" style="color: white; text-decoration: none;">Forgot Password?</a></span>
+          <div class="or">
+            <h5 class="mt-3 mb-3">-----------------OR----------------</h5>
+            <span>Log in with</span> <br>
+            <div class="soialMediaIcon mt-2 mb-2">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-google"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <span id="signin">Need an accound ? <a href="signin.html" class="ms-1 "
+                  style="text-decoration: none; color:rgb(224, 210, 14);">SIGN UP</a></span>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--Login code ends here-->
+
+  </div>
+  <!--main container-fluid ends here-->
+
+  <!--footer code start from here-->
+  <section class="footer" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+    <!--footer code start from here-->
+    <section class="container-fluid footerbox ">
+      <div class="row footerBoxOne ">
+        <div class="col-lg-4 col-md-8 col-sm-12 footerRowBox1 ">
+          <img src="assets/image/logo/mainLogo.png" width="150px" alt="">
+          <p class="mt-3">Groci.com (Innovative Retail Concepts Private Limited) is India’s largest online fruits and grocery store. With over 18,000 products and over a 1000 brands in our catalogue you will find everything you are looking for. Right from fresh Fruits
+            and Vegetables. Choose from a wide range of options in every category, exclusively handpicked to help you find the best quality available at the lowest prices.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-2 footerRowBox2 mb-4 ">
+          <h5>Company</h5>
+          <li><a href="aboutUs.html">About Groci store</a></li>
+          <li>
+            <p>Life At Company</p>
+          </li>
+          <li>
+            <p>How We Work</p>
+          </li>
+          <li>
+            <p>What Our Clients Say</p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox3  mb-4">
+          <h5>Support</h5>
+          <li>
+            <p>Privacy Policy</p>
+          </li>
+          <li>
+            <p>Terms & Conditions</p>
+          </li>
+          <li><a href="">Contact Us</a></li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox4 mb-4">
+          <h5>Quick Links</h5>
+          <li>
+            <p>Blog</p>
+          </li>
+          <li>
+            <p>Hire Us</p>
+          </li>
+          <li>
+            <p>Career</p>
+          </li>
+          <li><a href="">About us</a></li>
+          <li>
+            <p>React js </p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox5 mb-4">
+          <h5>Follow Us</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-skype"></a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="row footerBoxTwo">
+        <div class="col-lg-5 col-md-6 col-sm-6  footerRowBox6 ">
+          <h5>Registered Office Address:</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <p>Groci Internet Private Limited</p>
+            <p>Building Alyssa Begonia &</p>
+            <p>Outer Ring, Devarabeesanahalli Village,</p>
+            <p>Bengaluru, 560103, </p>
+            <p>Karnataka, India </p>
+            <p>CIN : U5ADN5SD54DJ2K5D</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6  footerRowBox7">
+          <h5>Make Money With Us</h5>
+          <div class="makeMoney mt-2 mb-2">
+            <p>Sell on groci store</p>
+            <p>Sell under groci store Accelerator</p>
+            <p>groci store Global Selling</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by groci store</p>
+            <p>Advertise Your Products</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12  footerRowBox8 text-center mt-5">
+          <img src="assets/image/qr.png" width="150px" alt="">
+          <h5>groci store</h5>
+        </div>
+        <span class="text-center mt-2">Copyright 2021 - 2022 <a href="index.html">Groci Store Pvt. Ltd. </a> All Rights
+                      Reserved. </span>
+      </div>
+    </section>
+
+  </section>
+  <!--footer code ends here-->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="assets/javascript/login.js"></script>
+
+  <!-- -----------------------JS Animation---------------------------- -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      -->
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.reviews{ 
+  .container{   
+    .row{
+      .cardbox{
+        @include center;
+        .card{
+          border-radius: 10px;
+          box-shadow: 1px 2px 10px ;
+          margin: 15px;
+          h5{
+            font-style:italic;
+          }
+          img{
+            width:15vw; 
+                        
+            box-shadow: 1px 1px 10px;     
+            @include center;
+          }
+          &:hover{
+            @include cardHover;
+          }
+          &:active{
+            color: $themeRed ;
+          }
+        }
+      }
+    }    
+  }  
+
+}

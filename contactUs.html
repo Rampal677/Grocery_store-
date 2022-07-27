@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- aos link  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Add icon library -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/9a3f5f7696.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/scss/stylesheet.css">
+  <!-- <link rel="stylesheet" href="assets/SCSS/footer/footer.css"> -->
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row box">
+
+      <!--Header side nav code code start from here-->
+      <section class="col-xs-12 header">
+        <nav class="navbar navbar-light fixed-top">
+          <a class="navbar-brand" href="index.html"><img src="assets/image/logo/mainLogo.png" class="mainLogo" alt="" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
+          <div class=" d-none d-md-block ">
+            <form class="d-flex search-form searchForm  " data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+              <input class="form-control me-2 " type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+              <a class="d-none d-md-block" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </form>
+          </div>
+          <div class="justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <img class="rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg"  id="profileImage1"  alt="image">
+          </button>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" data-bs-toggle="offcanvas" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header offcanvasHeader justify-content-center ">
+              <h5 class="offcanvas-title offcanvasTitle " id="offcanvasNavbarLabel"><img class="mainProfilePic text-center rounded-circle" src="/home/rampal/Desktop/Theme_Gstore/assets/image/pic .jpg" id="profileImage2" alt=""><br><span id="localUserName">Rampal Singh</span></h5>
+              <button type="button" class="btn-close btnClose text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offcanvasBody">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" card-product-name herf="index.html"> <i class="fa-solid fa-house-user"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="order.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-folder"></i> Order</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="" onclick="logout()" id="logutside"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="login.html" id="loginside"> <i class="fa-solid fa-right-to-bracket"></i> Log in</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!--navar code start from here-->
+      <section class="col-sm-12 navbarHeader d-none d-sm-none d-md-block" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <div class="container-fluid">
+          <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house-user"></i> Home</a>
+          <a class="nav-link" href="aboutUs.html"> <i class="fa-solid fa-address-card"></i> About Us</a>
+          <a class="nav-link" href="cart.html"> <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          <a class="nav-link" href="order.html"> <i class="fa-solid fa-folder"></i> Order</a>
+          <a class="nav-link" href="contactUs.html" tabindex="-1" aria-disabled="true"> <i class="fa-solid fa-address-book"></i> Contact Us</a>
+          <a class="nav-link" href="login.html" tabindex="-1" aria-disabled="true" id="login"><i
+             class="fa-solid fa-right-to-bracket"></i>Log In</a>
+          <a class="nav-link" href="" tabindex="-1" aria-disabled="true" id="logout" onclick="logout()"><i
+             class="fa-solid fa-right-to-bracket"></i>Log out</a>
+        </div>
+      </section>
+      <!--search bar for notepad to small device-->
+      <section class="col-sm-12 mt-2 mdSearch">
+        <form class="d-flex search-form searchForm" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+          <input class="form-control me-2 d-block d-md-none" type="search" placeholder="Search fruits and vegitable" aria-label="Search">
+          <a class="d-block d-md-none" type="submit" style="font-size:2em;"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </form>
+      </section>
+      <div class="showhide " id="view">
+
+        <!--Slider code start from here-->
+        <section class="slider row" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+          <div class="col-sm-12 sliderBox">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/image/banner/slider11.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/image/banner/slider2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/image/banner/slider14.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!--Slider code ends here-->
+      </div>
+    </div>
+  </div>
+
+  <!--Contact Us code start from here -->
+  <section class="container-fluid">
+
+    <div class="row contactUsBox">
+      <h1 class="text-center mt-5" data-aos="zoom-out">Contact Us</h1>
+      <div class="col-xl-6 col-lg-6 innerBox">
+        <div class="row innerRow text-center">
+          <div class="card " style="width: 13rem; height: 13rem;" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+            <div class="card-body mt-5">
+              <i class="fa-solid fa-phone" style="font-size: 2rem;"></i>
+              <h5 class="card-title">Phone</h5>
+              <h6 class="card-subtitle mb-2 text-muted">154-6527-985</h6>
+            </div>
+          </div>
+          <div class="card mt-5" style="width: 13rem; height: 13rem;" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+            <div class="card-body mt-5">
+              <i class="fa-solid fa-envelope" style="font-size: 2rem;"></i>
+              <h5 class="card-title">Email</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Groci@gmail.com</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 formBox " data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <form action="" class="pb-5">
+          <h4 class="text-center mb-5">AVAILABLE 24 HOURS A DAY!</h4>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Mobile Number" aria-describedby="emailHelp">
+          </textarea>
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+          <button type="submit" class="btn btn-primary">submit</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--footer code start from here-->
+  <section class="footer mt-5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+    <section class="container-fluid footerbox ">
+      <div class="row footerBoxOne ">
+        <div class="col-lg-4 col-md-8 col-sm-12 footerRowBox1 ">
+          <img src="assets/image/logo/mainLogo.png" width="150px" alt="">
+          <p class="mt-3">Groci.com (Innovative Retail Concepts Private Limited) is India’s largest online fruits and grocery store. With over 18,000 products and over a 1000 brands in our catalogue you will find everything you are looking for. Right from fresh Fruits
+            and Vegetables. Choose from a wide range of options in every category, exclusively handpicked to help you find the best quality available at the lowest prices.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mb-2 footerRowBox2 mb-4 ">
+          <h5>Company</h5>
+          <li><a href="aboutUs.html">About Groci store</a></li>
+          <li>
+            <p>Life At Company</p>
+          </li>
+          <li>
+            <p>How We Work</p>
+          </li>
+          <li>
+            <p>What Our Clients Say</p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox3  mb-4">
+          <h5>Support</h5>
+          <li>
+            <p>Privacy Policy</p>
+          </li>
+          <li>
+            <p>Terms & Conditions</p>
+          </li>
+          <li><a href="">Contact Us</a></li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox4 mb-4">
+          <h5>Quick Links</h5>
+          <li>
+            <p>Blog</p>
+          </li>
+          <li>
+            <p>Hire Us</p>
+          </li>
+          <li>
+            <p>Career</p>
+          </li>
+          <li><a href="">About us</a></li>
+          <li>
+            <p>React js </p>
+          </li>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6  footerRowBox5 mb-4">
+          <h5>Follow Us</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-skype"></a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="row footerBoxTwo">
+        <div class="col-lg-5 col-md-6 col-sm-6  footerRowBox6 ">
+          <h5>Registered Office Address:</h5>
+          <div class="soialMediaIcon mt-2 mb-2">
+            <p>Groci Internet Private Limited</p>
+            <p>Building Alyssa Begonia &</p>
+            <p>Outer Ring, Devarabeesanahalli Village,</p>
+            <p>Bengaluru, 560103, </p>
+            <p>Karnataka, India </p>
+            <p>CIN : U5ADN5SD54DJ2K5D</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6  footerRowBox7">
+          <h5>Make Money With Us</h5>
+          <div class="makeMoney mt-2 mb-2">
+            <p>Sell on groci store</p>
+            <p>Sell under groci store Accelerator</p>
+            <p>groci store Global Selling</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by groci store</p>
+            <p>Advertise Your Products</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12  footerRowBox8 text-center mt-5">
+          <img src="assets/image/qr.png" width="150px" alt="">
+          <h5>groci store</h5>
+        </div>
+        <span class="text-center mt-2">Copyright 2021 - 2022 <a href="index.html">Groci Store Pvt. Ltd. </a> All Rights
+                  Reserved. </span>
+      </div>
+    </section>
+
+
+  </section>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="assets/javascript/login.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!--jQuery CDN-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  <!-- -----------------------JS Animation---------------------------- -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
